@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Localized App</string>
+    <string name="title">English Title</string>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Khasi</item>
+    </string-array>
+    <string name="hello">Hello</string>
+</resources>
