@@ -12,8 +12,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+/**
+ * @author Kyrshanlang R Dkhar, Peace
+ * @version 1.0
+ * This Screen shows the default Language selected and displays an option to change language
+ */
 public class AppSettings extends AppCompatActivity {
 
+    /**
+     * Spinner to display language selected and for selection
+     */
     private Spinner language;
     private Resources resources;
     private SharedPreferences preferences;
@@ -30,7 +38,9 @@ public class AppSettings extends AppCompatActivity {
 
         ArrayAdapter mAdapter = new ArrayAdapter<String>(AppSettings.this, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.languages));
         language.setAdapter(mAdapter);
-
+        /**
+         * Set the Selected Language in the Spinner based on the value from SharedPreferences
+         */
         //setSelected Option for language
         if (LocaleHelper.getLanguage(AppSettings.this).equalsIgnoreCase("en")) {
             language.setSelection(mAdapter.getPosition("English"));
@@ -38,6 +48,9 @@ public class AppSettings extends AppCompatActivity {
             language.setSelection(mAdapter.getPosition("Khasi"));
         }
 
+        /**
+         * Add a Listener to the spinner to set the Language of the App
+         */
         language.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override

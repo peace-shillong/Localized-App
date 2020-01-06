@@ -8,6 +8,9 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.TextView;
 
+/**
+ * A Second Activity Screen that displays text in the selected language set by the user
+ */
 public class Second extends AppCompatActivity {
 
     TextView mTextView;
